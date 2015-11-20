@@ -73,4 +73,4 @@ levels(meansAndDevs$activitycode) <- activityLabels$V2
 # use summarize_each and/or group by
 step5 <- group_by(meansAndDevs3, activitycode)
 step5b <- summarise_each(step5, funs(mean))
-
+write.table(step5b, row.name=FALSE, file="gettingCleaningProject")
